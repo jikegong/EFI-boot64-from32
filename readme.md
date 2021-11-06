@@ -18,9 +18,8 @@
 
 
 ```
-set root=(hd0,gtp2)
-linux /boot/vmlinuz-5.11.0-16-generic root=/dev/mmcblk1p2
-initrd /boot/initrd.img-5.11.0-16-generic
+linux (hd0,gpt2)/vmlinuz root=/dev/mmcblk1p2
+initrd (hd0,gpt2)/initrd.img
 boot
 ```
 
@@ -40,4 +39,12 @@ sudo update-grub
 sudo update-grub2
 ```
 
-同样，根据你的情况，替换`/dev/mmcblk1p2`
+同样，根据你的情况，替换`/dev/mmcblk1p2`,
+
+if your set the security key
+
+eg:
+
+`/dev/vgubuntu/root`
+
+
